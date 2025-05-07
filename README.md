@@ -19,9 +19,27 @@ pip install yfinance
 pip install google-api-python-client
 pip install google-auth
 pip install google-cloud
+<<<<<<< HEAD
+=======
+
+cd frontend/
+npm install
+>>>>>>> 64de444 (Sort of working frontend)
 ```
+
 
 ### Run Locally
 ```
+<<<<<<< HEAD
 
+=======
+cd frontend/
+npm run start
+```
+
+If it's already in use, try
+```
+lsof -i :3000
+kill -9 <PID>
+>>>>>>> 64de444 (Sort of working frontend)
 ```
