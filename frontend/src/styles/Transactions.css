@@ -1,0 +1,135 @@
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.transactions-page {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: calc(100vh - 50px); 
+}
+
+.transactions-input {
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex; /* Display children elements in a row */
+    align-items: center; /* Vertically center children elements */
+}
+
+.transactions-input form {
+    display: flex; /* Ensure form elements are displayed in a row */
+    align-items: center; /* Vertically center form elements */
+}
+
+.transactions-input input,
+.transactions-input select,
+.transactions-input label {
+    margin-right: 10px;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+.transaction-input-select {
+    margin-right: 10px;
+    font-family: monospace;
+    width: 200px;
+    z-index: 10;
+}
+
+.transaction-submit {
+    font-family: monospace;
+}
+
+/** particularly the transactions table **/
+.transactions-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticker-name {
+    font-family: monospace;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: monospace;
+}
+
+.transaction-items-table {
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.transaction-items-table.open {
+    display: block;
+    margin-top: 10px;
+}
+
+.transaction-item {
+    padding: 10px;
+    flex: 1;
+}
+
+.transaction-header {
+    background: lightgray;
+}
+
+.fixed-column-transaction {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    border-left: none;
+    min-width: 90px;
+}
+
+.transaction-items-table tbody td {
+    text-align: right;
+}
+
+/** transaction results related **/
+.transaction-result-container {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    right: 0;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.transaction-result {
+    font-family: monospace;
+}
+
+.transaction-result.profit-green {
+    color: green;
+}
+
+.transaction-result.profit-red {
+    color: red;
+}
+
+.transaction-result-table {
+    margin-top: 5px;
+    font-family: monospace;
+    border-collapse: collapse;
+}
+
+.net-profit-text {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: monospace;
+}

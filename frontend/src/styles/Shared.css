@@ -1,0 +1,307 @@
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/** <======== Nav Bar ========> **/
+.nav-header {
+  width: 100%;
+  font-family: monospace;
+  color: rgb(47, 86, 216);
+  font-size: 24px; 
+  font-weight: bold;
+}
+
+.nav-option {
+  background-color: #ffffff;
+  margin-left: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+  cursor: pointer;
+  font-size: large;
+  text-decoration: none;
+}
+
+.nav-option:hover {
+  background-color: rgb(251, 239, 128);
+}
+
+.nav-option.selected {
+  text-decoration: underline;
+}
+
+.logo-image {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  width: 40px;
+  padding-right: 15px;
+}
+
+/** <======== Explaination ========> **/
+.ev-column:hover::after {
+  content: "[market cap + debt – cash]";
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.ev-ebitda-column:hover::after {
+  content: "[EV/ebitda], when it is high, \A it signals company is overvalued";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.ew-column:hover::after {
+  content: "earnings per worker";
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.dividend-yield-column:hover::after {
+  content: "[annual dividends per share/price per share] \A if dividend yield is 4% and I have 100 shares, I'll get $400";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.pe-column:hover::after {
+  content: "[market price per share/earnings per share] \A the average P/E ratio is around 20 to 25";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.forward-pe-column:hover::after {
+  content: "estimated PE, between 10-25 is good \A anything higher might mean irrationally high growth anticipations ";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.peg-column:hover::after {
+  content: "PE/Earnings growth rate over the 5 yrs \A lower is usually better especially one under 1";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.ps-column:hover::after {
+  content: "[market price per share / sales per share] \A good between 1 and 2, lower";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.pb-column:hover::after {
+  content: "[market price per share / book value per share] \A book value is total value of a company's assets if \A the company were liquidated, any value under 1.0 is good";
+  position: absolute;
+  top: -60px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.free-cash-column:hover::after {
+  content: "[cash flow from operation - capital expenditure] \A Growing FCF are frequently a prelude to increased earnings \A FCF * 10 >= Market cap is generally good";
+  position: absolute;
+  top: -60px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.earnings-free-cash-column:hover::after {
+  content: "[cash flow from operation - capital expenditure] \A Growing FCF are frequently a prelude to increased earnings \A FCF * 10 >= Market cap is generally good";
+  position: absolute;
+  top: -60px;
+  transform: translateX(-85%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.roe-column:hover::after {
+  content: "[net revenue - expenses / total $$ that would be returned to the shareholders] \A good if it's equal to or just above the average for the company's sector";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.roa-column:hover::after {
+  content: "[net revenue - expenses / total $$ that would be returned to the shareholders] \A good if it's equal to or just above the average for the company's sector";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.profit-margin-column:hover::after {
+  content: "[(revenue - costs of goods sold - operating expenses \A  - other expenses - interest - tax)/revenue] \A 10% is healthy ";
+  position: absolute;
+  top: -60px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.change-column:hover::after {
+  content: "the range of price of a given share in the last 52 weeks \A signals the volatility";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-75%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+.d2e-column:hover::after {
+  content: "total debt / total equity \A good between 1 and 1.5";
+  position: absolute;
+  top: -45px;
+  transform: translateX(-100%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #9c9b9b;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  white-space: pre;
+}
+
+/** <======== button for deletion ========> **/
+.dropbtn {
+  display: inline-block;
+  background-color: transparent;
+  color: red;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -18px;
+  left: -20px;
+}
+
+td:not(:hover) .dropbtn {
+  display: none;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #ddd;
+}
+
+.delete-click {
+  position: relative;
+  display: inline-block;
+}
