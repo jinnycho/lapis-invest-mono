@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 **/__pycache__/
 db.sqlite3
+/backend/analytics/key.json
