@@ -454,7 +454,9 @@ export function Transactions({
                                                 .map((transaction, idx) => {
                                                     const profitLoss = transaction.transaction_type === 'sell'
                                                         ? (transaction.transaction_price * transaction.transaction_quantity) - (profitData.currentPrice * transaction.transaction_quantity)
-                                                        : (profitData.currentPrice * transaction.transaction_quantity) - (transaction.transaction_price * transaction.transaction_quantity);
+                                                        : transaction.transaction_type === 'qualified_dividend'
+                                                            ? transaction.amount
+                                                            : (profitData.currentPrice * transaction.transaction_quantity) - (transaction.transaction_price * transaction.transaction_quantity);
                                                     const profitLossColor = profitLoss > 0 ? 'green' : 'red';
 
                                                     return (
@@ -469,7 +471,7 @@ export function Transactions({
                                                             <td>${formatSmallTransactions(transaction.transaction_price)}</td>
                                                             <td>{transaction.transaction_quantity}</td>
                                                             <td>${formatSmallTransactions(transaction.fee)}</td>
-                                                            <td>${formatSmallTransactions((transaction.transaction_price * transaction.transaction_quantity) - transaction.fee)}</td>
+                                                            <td>${formatSmallTransactions(transaction.amount)}</td>
                                                             <td style={{ color: profitLossColor }}>
                                                                 ${formatSmallTransactions(profitLoss)}
                                                             </td>

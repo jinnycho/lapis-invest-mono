@@ -115,7 +115,6 @@ def get_transactions(request):
 
     return Response(grouped_transactions)
 
-
 """
 http://localhost:8000/api/delete_transaction/?transaction_id=1
 """
@@ -137,6 +136,7 @@ http://localhost:8000/api/update_transactions_companies/
 @api_view(["PUT"])
 def update_transactions_companies(request):
     transaction_tickers = Transactions.objects.values_list('ticker', flat=True).distinct()
+    
     for ticker in transaction_tickers:
         if (ticker in etf):
             # Get ETF data from Google spreadsheet

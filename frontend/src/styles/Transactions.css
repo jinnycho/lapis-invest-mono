@@ -168,6 +168,8 @@ table {
 
 .transaction-header {
     background: lightgray;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .fixed-column-transaction {
@@ -175,12 +177,14 @@ table {
     left: 0;
     z-index: 1;
     background-color: white;
-    border-left: none;
+    border: 1px solid #ccc;
     min-width: 90px;
 }
 
 .transaction-items-table tbody td {
     text-align: right;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 /** transaction results related **/
@@ -196,10 +200,13 @@ table {
 
 .transaction-result {
     font-family: monospace;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .transaction-result.profit-green {
     color: green;
+    border: 1px solid #ccc;
 }
 
 .transaction-result.profit-red {
@@ -210,6 +217,11 @@ table {
     margin-top: 5px;
     font-family: monospace;
     border-collapse: collapse;
+}
+
+.transaction-result-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .net-profit-text {
